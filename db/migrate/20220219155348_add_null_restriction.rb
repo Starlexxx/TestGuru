@@ -5,7 +5,7 @@ class AddNullRestriction < ActiveRecord::Migration[7.0]
     change_column_null(:tests, :level, false)
     change_column_null(:questions, :body, false)
     change_column_null(:answers, :body, false)
-    change_column_null(:answers, :correct, false)
+    change_column_null(:answers, :is_correct, false)
     change_column_null(:users, :email, false)
     change_column_null(:users, :password_digest, false)
   end
