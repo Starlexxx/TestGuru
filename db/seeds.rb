@@ -42,9 +42,9 @@ Answer.create([
                 }
               ])
 
-PassedTest.create([
-                  { test_id: tests[0].id, user_id: User.last.id, is_passed: true },
+UserTest.create([
+                  { test_id: tests[0].id, user_id: User.last.id },
                   { test_id: tests[1].id, user_id: User.last.id },
-                  { test_id: tests[2].id, user_id: User.last.id, is_passed: true },
-                  { test_id: tests[3].id, user_id: User.last.id, is_passed: true }
+                  { test_id: tests[2].id, user_id: User.last.id },
+                  { test_id: tests[3].id, user_id: User.last.id }
                 ])

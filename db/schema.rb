@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_02_23_174911) do
+ActiveRecord::Schema[7.0].define(version: 2022_02_24_112500) do
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
     t.boolean "is_correct", default: false, null: false
@@ -24,16 +24,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_23_174911) do
     t.string "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "passed_tests", force: :cascade do |t|
-    t.integer "test_id", null: false
-    t.integer "user_id", null: false
-    t.boolean "is_passed"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["test_id"], name: "index_passed_tests_on_test_id"
-    t.index ["user_id"], name: "index_passed_tests_on_user_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -53,6 +43,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_23_174911) do
     t.index ["category_id"], name: "index_tests_on_category_id"
   end
 
+  create_table "user_tests", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "test_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["test_id"], name: "index_user_tests_on_test_id"
+    t.index ["user_id"], name: "index_user_tests_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "password_digest", null: false
@@ -61,8 +60,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_23_174911) do
   end
 
   add_foreign_key "answers", "questions"
-  add_foreign_key "passed_tests", "tests"
-  add_foreign_key "passed_tests", "users"
   add_foreign_key "questions", "tests"
   add_foreign_key "tests", "categories"
+  add_foreign_key "user_tests", "tests"
+  add_foreign_key "user_tests", "users"
 end
