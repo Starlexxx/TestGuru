@@ -42,9 +42,8 @@ Answer.create([
                 }
               ])
 
-TestUser.create([
+TestsUser.create([
                   { test_id: tests[0].id, user_id: User.last.id },
-                  { test_id: tests[1].id, user_id: User.last.id },
                   { test_id: tests[2].id, user_id: User.last.id },
                   { test_id: tests[3].id, user_id: User.last.id }
                 ])
