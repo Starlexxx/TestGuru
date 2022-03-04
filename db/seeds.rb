@@ -16,11 +16,12 @@ categories = Category.create([
                              ])
 
 tests = Test.create([
-                      { title: 'String interpolation', level: 1, category_id: categories[0].id },
-                      { title: 'Exeptions', level: 2, category_id: categories[0].id },
-                      { title: 'Unordered list', level: 1, category_id: categories[1].id },
-                      { title: 'SELECT SQL', level: 2, category_id: categories[3].id },
-                      { title: 'JOIN SQL', level: 3, category_id: categories[3].id }
+                      { title: 'String interpolation', level: 1, category_id: categories[0].id,
+                        author_id: User.last.id },
+                      { title: 'Exeptions', level: 2, category_id: categories[0].id, author_id: User.last.id },
+                      { title: 'Unordered list', level: 1, category_id: categories[1].id, author_id: User.last.id },
+                      { title: 'SELECT SQL', level: 2, category_id: categories[3].id, author_id: User.last.id },
+                      { title: 'JOIN SQL', level: 3, category_id: categories[3].id, author_id: User.last.id }
                     ])
 
 questions = Question.create([
@@ -43,7 +44,7 @@ Answer.create([
               ])
 
 TestsUser.create([
-                  { test_id: tests[0].id, user_id: User.last.id },
-                  { test_id: tests[2].id, user_id: User.last.id },
-                  { test_id: tests[3].id, user_id: User.last.id }
-                ])
+                   { test_id: tests[0].id, user_id: User.last.id },
+                   { test_id: tests[2].id, user_id: User.last.id },
+                   { test_id: tests[3].id, user_id: User.last.id }
+                 ])
