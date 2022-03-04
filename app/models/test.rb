@@ -8,10 +8,14 @@ class Test < ApplicationRecord
   scope :easy, -> { where(level: 0..1) }
   scope :medium, -> { where(level: 2..4) }
   scope :difficult, -> { where(level: 5..Float::INFINITY) }
-  scope :sort_by_category, lambda { |category|
-                             joins(:category).where(categories: { title: category }).order(title: :DESC).pluck(:title)
-                           }
+  scope :by_category, lambda { |category|
+                        joins(:category).where(categories: { title: category })
+                      }
 
   validates :title, presence: true, uniqueness: { scope: :level }
   validates :level, numericality: { only_integer: true, greater_than: 0 }
+
+  def self.sort_by_category(category)
+    by_category(category).order(title: :desc).pluck(:title)
+  end
 end
