@@ -1,0 +1,11 @@
+<h1>The <%= @test_passage.test.title%> test was completed</h1>
+
+<p>
+  <% if @test_passage.passed? %>
+    You passed the test: <a style="color:green"><%=@test_passage.result %>%</a>
+  <%else%>
+    You failed the test: <a style="color:red"><%=@test_passage.result %>%</a>
+  <%end%>
+ </p>
+
+ <p><%= link_to 'Back to tests', tests_path %></p> 
