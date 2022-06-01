@@ -14,8 +14,8 @@
 </p>
 
 <div>
-  <%= link_to "Edit", edit_answer_path(@answer) %> |
-  <%= link_to "Back", @answer.question %>
+  <%= link_to "Edit", edit_admin_answer_path(@answer) %> |
+  <%= link_to "Back", admin_question_path(@answer.question) %>
 
-  <%= button_to "Destroy this answer", @answer, method: :delete %>
+  <%= button_to "Destroy this answer", admin_answer_path(@answer), method: :delete %>
 </div>
