@@ -21,7 +21,7 @@ class Admin
     end
 
     def create
-      @test = Test.new(test_params)
+      @test = current_user.author_tests.build(test_params) if current_user.admin?
       if @test.save
         redirect_to admin_tests_path
       else
