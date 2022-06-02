@@ -20,7 +20,7 @@ class Admin
     def create
       @answer = @question.answers.new(answer_params)
       if @answer.save
-        redirect_to @answer, notice: 'Answer was created successfully'
+        redirect_to admin_question_path(@question), notice: 'Answer was created successfully'
       else
         render :new
       end
