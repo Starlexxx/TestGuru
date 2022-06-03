@@ -21,7 +21,7 @@ class Admin
     end
 
     def create
-      @test = current_user.author_tests.build(test_params) if current_user.admin?
+      @test = current_user.author_tests.build(test_params)
       if @test.save
         redirect_to admin_tests_path
       else
@@ -34,15 +34,10 @@ class Admin
       redirect_to admin_tests_path
     end
 
-    def start
-      current_user.tests.push(@test)
-      redirect_to current_user.test_passage(@test)
-    end
-
     private
 
     def test_params
-      params.require(:test).permit(:title, :level, :category_id, :author_id)
+      params.require(:test).permit(:title, :level, :category_id)
     end
 
     def set_test
