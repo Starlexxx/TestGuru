@@ -1,0 +1,54 @@
+ru:
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    select:
+      prompt: "Выбор"
+
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      questions_count: "Количество вопросов"
+      actions: "Действия"
+    test:
+      start: "Начать"
+
+  admin:
+    tests:
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        questions_count: "Количество вопросов"
+        actions: "Действия"
+        create: "Создать тест"
+      test:
+        edit: "Редактировать"
+        show: "Открыть"
+        delete: "Удалить"
+        sure: "Вы уверены?"
+      create:
+        success: "Тест создан"
+      new:
+        header: "Создание нового теста"
+        back: "Назад"
+      edit:
+        header: "Редактирование теста"
+        back: "Назад"
+      show:
+        title: "Название"
+        level: "Уровень"
+        t_questions: "Вопросы теста"
+        back: "Назад"
+        edit: "Редактировать"
+        new_question: "Новый вопрос" 
