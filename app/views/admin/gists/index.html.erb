@@ -1,0 +1,13 @@
+<div class="row justify-content-center">
+  <h2><%= t('.header') %></h2>
+
+  <table class="table table-success table-striped">
+    <tr>
+      <th><%= t('.question') %></th>
+      <th><%= t('.link') %></th>
+      <th><%= t('.email') %></th>
+    </tr>
+
+  <%= render @gists %>
+  </table>
+</div>
