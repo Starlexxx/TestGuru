@@ -24,6 +24,11 @@ en:
     test:
       start: "Start"
 
+  test_passages:
+    gist:
+      success: "Gist was successfully created! %{url}"
+      failure: "An error occurred while saving gist"
+
   admin:
     tests:
       index:
@@ -53,3 +58,9 @@ en:
         back: "Back"
         edit: "Edit"
         new_question: "New question" 
+    gists:
+      index:
+        header: "Gists"
+        question: "Question"
+        link: "Link"
+        email: "E-mail"

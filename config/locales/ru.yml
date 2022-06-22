@@ -23,6 +23,11 @@ ru:
     test:
       start: "Начать"
 
+  test_passages:
+    gist:
+      success: "Gist успешно сохранен! %{url}"
+      failure: "Во время сохранения gist произошла ошибка"
+
   admin:
     tests:
       index:
@@ -52,3 +57,9 @@ ru:
         back: "Назад"
         edit: "Редактировать"
         new_question: "Новый вопрос" 
+    gists:
+      index:
+        header: "Список гистов"
+        question: "Вопрос"
+        link: "Ссылка"
+        email: "E-mail пользователя"

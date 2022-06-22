@@ -39,4 +39,8 @@
 yarn-debug.log*
 .yarn-integrity
 
+# Ignore DS_Store
 **/.DS_Store
+
+# Ignore secrets
+/.env
