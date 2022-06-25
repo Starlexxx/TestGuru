@@ -2,9 +2,13 @@
   <div class="col col-md-4">
     <h2><%= t('.header') %></h2>
 
-    <table class="table table-dark table-striped">
+    <table class="table">
       <tr>
-        <th align="left"><%= t('.title')%></th>
+        <th class="sort-by-title pointer">
+          <%= t('.title')%>
+          <%= octicon 'arrow-up', class: 'text-success hide' %>
+          <%= octicon 'arrow-down', class: 'text-success hide' %>
+        </th>
         <th align="left"><%= t('.level')%></th>
         <th align="left"><%= t('.questions_count')%></th>
         <th colspan= "3"><%= t('.actions')%></th>

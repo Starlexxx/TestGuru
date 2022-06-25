@@ -7,6 +7,7 @@ import "bootstrap"
 
 // import the application.scss we created for the bootstrap CSS (if you are not using assets stylesheet)
 import "../stylesheets/application"
+import "../utilities/sorting"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
