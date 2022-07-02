@@ -29,6 +29,12 @@ en:
       success: "Gist was successfully created! %{url}"
       failure: "An error occurred while saving gist"
 
+  shared:
+  errors:
+    header:
+      one: "%{count} error detected"
+      many: "%{count} errors detected"
+
   admin:
     tests:
       index:
@@ -43,6 +49,7 @@ en:
         show: "Show"
         delete: "Delete"
         sure: "Are you sure?"
+        cancel: "Cancel"
       create:
         success: "Test was created"
       new:
@@ -58,6 +65,9 @@ en:
         back: "Back"
         edit: "Edit"
         new_question: "New question" 
+      form_inline:
+        submit: "OK"
+          
     gists:
       index:
         header: "Gists"
