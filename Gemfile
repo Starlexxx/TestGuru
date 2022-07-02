@@ -62,6 +62,8 @@ gem 'faraday-retry'
 gem 'octokit'
 
 gem 'dotenv-rails'
+
+gem 'octicons_helper'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
