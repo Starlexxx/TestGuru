@@ -42,5 +42,7 @@ yarn-debug.log*
 # Ignore DS_Store
 **/.DS_Store
 
+/.idea
+
 # Ignore secrets
 /.env

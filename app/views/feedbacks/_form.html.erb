@@ -1,0 +1,21 @@
+<%= form_with(model: feedback, local: true) do |form| %>
+<%= render 'shared/errors', resource: @feedback %>
+
+  <p>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </p>
+
+
+  <p>
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </p>
+
+  <p>
+    <%= form.label :message %>
+    <%= form.text_field :message %>
+  </p>
+
+  <p><%= form.submit %></p>
+<% end %>
