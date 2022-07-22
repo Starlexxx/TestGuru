@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :feedbacks
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :log_out }
   root 'tests#index'
 
