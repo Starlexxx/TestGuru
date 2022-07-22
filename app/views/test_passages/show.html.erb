@@ -1,5 +1,15 @@
 <h1>Passing the <%= @test_passage.test.title %> test</h1>
 
+<div class = "progress">
+<%= content_tag :div, 
+                class: "progress-bar progress-bar-striped bg-success",
+                role: "progressbar",
+                data: {current_number: @test_passage.current_question_id, 
+                count: @test_passage.test.questions.count },
+                style: "width: 0%" do %>
+<% end %>
+</div>
+
 <p>
   Question <%= @test_passage.current_question_position %> of <%= @test_passage.test.questions.count %>
 </p>

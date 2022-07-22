@@ -28,6 +28,12 @@ ru:
       success: "Gist успешно сохранен! %{url}"
       failure: "Во время сохранения gist произошла ошибка"
 
+  shared:
+    errors:
+      header:
+        one: "Обнаружена %{count} ошибка"
+        many: "Обнаружено %{count} ошибки"
+
   admin:
     tests:
       index:
@@ -41,6 +47,7 @@ ru:
         edit: "Редактировать"
         show: "Открыть"
         delete: "Удалить"
+        cancel: "Отмена"
         sure: "Вы уверены?"
       create:
         success: "Тест создан"
@@ -56,7 +63,10 @@ ru:
         t_questions: "Вопросы теста"
         back: "Назад"
         edit: "Редактировать"
-        new_question: "Новый вопрос" 
+        new_question: "Новый вопрос"
+      form_inline:
+        submit: "ОК"
+
     gists:
       index:
         header: "Список гистов"
